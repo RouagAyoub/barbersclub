@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "447206165041",
+    "firebase_url": "https://barbersclubs.firebaseio.com",
+    "project_id": "barbersclubs",
+    "storage_bucket": "barbersclubs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447206165041:android:ad04ca90d1b23a8323e310",
+        "android_client_info": {
+          "package_name": "com.example.barberclube"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "447206165041-n5rle731tfkj3ele6semv5tvguqbh6ck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.barberclube",
+            "certificate_hash": "2f8096a043ac3d29e900d83d70955bf39336969f"
+          }
+        },
+        {
+          "client_id": "447206165041-nke3q304l5ltr1srkjsgeqel04hvqrb2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABaEF_37kp8aLrV61kEyRvSfpk_CcnbLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "447206165041-nke3q304l5ltr1srkjsgeqel04hvqrb2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
