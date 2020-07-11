@@ -1,5 +1,5 @@
 import 'package:barberclube/helper/changepage.dart';
-import 'package:barberclube/home/homeclient.dart';
+import 'package:barberclube/loginsc/carryinscription.dart';
 import 'package:barberclube/toast/toast.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +14,10 @@ class Auth {
   Future<void> testnumber(BuildContext context, String number) async {
     final PhoneVerificationCompleted _verificationCompleted =
         (AuthCredential credential) async {
-      AuthResult result = await _auth.signInWithCredential(credential);
-      if (result.user != null) {
-        changeremplacepage(context, Homeclient());
+      //AuthResult result = await _auth.signInWithCredential(credential);
+      if (credential != null) {
+        changewithargument(context, Carryinscription(),
+            {'credential': credential, '_auth': _auth});
       }
     };
 
@@ -51,11 +52,10 @@ class Auth {
                   final code = _codecontroler.text.trim();
                   AuthCredential credential = PhoneAuthProvider.getCredential(
                       verificationId: verificationId, smsCode: code);
-                  AuthResult authResult =
-                      await _auth.signInWithCredential(credential);
-                  if (authResult.user != null) {
-
-                    changeremplacepage(context, Homeclient());
+                  //AuthResult authResult = await _auth.signInWithCredential(credential);
+                  if (credential != null) {
+                    changewithargument(context, Carryinscription(),
+                        {'credential': credential, '_auth': _auth});
                   } else {
                     showToast('wrong code try again', Colors.red);
                   }
@@ -93,6 +93,4 @@ class Auth {
       showToast(e.code, Colors.red);
     }
   }
-
-  
 }

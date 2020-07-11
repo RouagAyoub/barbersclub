@@ -9,3 +9,11 @@ void changeremplacepage(BuildContext context, Widget widget) {
   Navigator.pushReplacement(
       context, MaterialPageRoute(builder: (context) => widget));
 }
+
+void changewithargument(BuildContext context, Widget widget, Map map) {
+  Navigator.push(
+      context,
+      MaterialPageRoute(
+          builder: (context) => widget,
+          settings: RouteSettings(arguments: map)));
+}

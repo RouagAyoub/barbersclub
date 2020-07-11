@@ -40,6 +40,7 @@ class _Login extends State<Login> {
                     ),
                     Expanded(
                       child: TextFormField(
+                        keyboardType: TextInputType.number,
                         controller: _phoneno,
                         decoration: InputDecoration(hintText: 'phone number'),
                         validator: (value) {
